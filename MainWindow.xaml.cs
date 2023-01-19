@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using System.Runtime.InteropServices;
+using System.Windows;
 using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 
 namespace Clock
 {
@@ -16,7 +18,7 @@ namespace Clock
 
         protected override void OnRenderSizeChanged(SizeChangedInfo sizeInfo)
         {
-            if(sizeInfo.NewSize.Width > 0)
+            if (sizeInfo.NewSize.Width > 0)
             {
                 base.OnRenderSizeChanged(sizeInfo);
             }
@@ -24,8 +26,8 @@ namespace Clock
 
         private double _startLeft;
         private double _startTop;
- 
-        
+
+
 
         private void Thumb_DragStarted(object sender, DragStartedEventArgs e)
         {
@@ -35,11 +37,22 @@ namespace Clock
 
         private void Thumb_DragDelta(object sender, DragDeltaEventArgs e)
         {
-            Left = _startLeft +(e.HorizontalChange);
-            Top = _startTop +(e.VerticalChange);
+            Left = _startLeft + (e.HorizontalChange);
+            Top = _startTop + (e.VerticalChange);
 
             _startLeft = Left;
             _startTop = Top;
+        }
+
+        [DllImport("user32")]
+        public static extern void LockWorkStation();
+
+
+     
+
+        private void CommandBinding_OnExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            LockWorkStation();
         }
     }
 }
