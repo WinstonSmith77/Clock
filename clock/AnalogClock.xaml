@@ -11,8 +11,8 @@
         <converters:MinutesOrSecondsToAngleConverter  x:Key="minsToAngle" />
         <converters:IsEvenConverter  x:Key="isEven" />
         <Storyboard x:Key="blur">
-            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle"  From="-5" To="3" Duration="0:0:0.03"  />
-            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle"  From="3" To="0" Duration="0:0:0.03" />
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle"  From="-6" To="6" Duration="0:0:0.1"  />
+            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle"  From="6" To="0" Duration="0:0:0.1" />
         </Storyboard>
 
     </UserControl.Resources>
