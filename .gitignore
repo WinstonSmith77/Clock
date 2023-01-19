@@ -180,3 +180,6 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 Status API Training Shop Blog About © 2014 GitHub, Inc. Terms Privacy Security Contact 
+*.lock
+
+*.vsidx
