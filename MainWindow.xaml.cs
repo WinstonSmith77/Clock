@@ -1,7 +1,9 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using System.Windows.Interop;
 
 namespace Clock
 {
@@ -48,11 +50,28 @@ namespace Clock
         public static extern void LockWorkStation();
 
 
-     
+        [DllImport("user32.dll")]
+        static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
-        private void CommandBinding_OnExecuted(object sender, ExecutedRoutedEventArgs e)
+        private int SC_MONITORPOWER = 0xF170;
+        private int WM_SYSCOMMAND = 0x0112;
+
+        public  void TurnOffScreen()
+        {
+            const int off = 2;
+            var handle  = new WindowInteropHelper(this).Handle;
+            SendMessage(handle, WM_SYSCOMMAND, SC_MONITORPOWER, 2);
+        }
+
+
+        private void Lock_CommandBinding_OnExecuted(object sender, ExecutedRoutedEventArgs e)
         {
             LockWorkStation();
+        }
+
+        private void ScreenOff_CommandBinding_OnExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            TurnOffScreen();
         }
     }
 }

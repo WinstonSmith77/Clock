@@ -6,15 +6,18 @@
     <Window.Resources>
         <ResourceDictionary>
             <RoutedUICommand x:Key="Lock" Text="Lock" />
+            <RoutedUICommand x:Key="ScreenOff" Text="ScreenOff" />
         </ResourceDictionary>
     </Window.Resources>
   
     <Window.InputBindings>
         <KeyBinding Key="L" Modifiers="Alt+Control+Shift"  Command="{StaticResource Lock}" />
+        <KeyBinding Key="S" Modifiers="Alt+Control+Shift"  Command="{StaticResource ScreenOff}" />
     </Window.InputBindings>
 
     <Window.CommandBindings>
-        <CommandBinding Command="{StaticResource Lock}" Executed="CommandBinding_OnExecuted" />
+        <CommandBinding Command="{StaticResource Lock}" Executed="Lock_CommandBinding_OnExecuted" />
+        <CommandBinding Command="{StaticResource ScreenOff}" Executed="ScreenOff_CommandBinding_OnExecuted" />
     </Window.CommandBindings>
   
 
