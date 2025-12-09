@@ -15,6 +15,40 @@ namespace Clock
         public MainWindow()
         {
             InitializeComponent();
+
+            // Load window position
+            var left = Properties.Settings.Default.WindowLeft;
+            var top = Properties.Settings.Default.WindowTop;
+
+            // Get virtual screen bounds
+            var screenLeft = SystemParameters.VirtualScreenLeft;
+            var screenTop = SystemParameters.VirtualScreenTop;
+            var screenRight = SystemParameters.VirtualScreenLeft + SystemParameters.VirtualScreenWidth;
+            var screenBottom = SystemParameters.VirtualScreenTop + SystemParameters.VirtualScreenHeight;
+
+            // Clamp window position to screen bounds
+            if (left < screenLeft)
+            {
+                left = screenLeft;
+            }
+
+            if (left > screenRight - Width)
+            {
+                left = screenRight - Width;
+            }
+
+            if (top < screenTop)
+            {
+                top = screenTop;
+            }
+
+            if (top > screenBottom - Height)
+            {
+                top = screenBottom - Height;
+            }
+
+            Left = left;
+            Top = top;
         }
 
 
@@ -70,6 +104,16 @@ namespace Clock
         private void ScreenOff_CommandBinding_OnExecuted(object sender, ExecutedRoutedEventArgs e)
         {
             TurnOffScreen();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            // Store window position
+            Properties.Settings.Default.WindowLeft = Left;
+            Properties.Settings.Default.WindowTop = Top;
+            Properties.Settings.Default.Save();
+
+            base.OnClosed(e);
         }
     }
 }
