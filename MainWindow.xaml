@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Clock.MainWindow"
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-            xmlns:clock2="clr-namespace:Clock.clock" SizeToContent="WidthAndHeight" Topmost="True" WindowStyle="None" ShowInTaskbar="false" AllowsTransparency="True" 
+            xmlns:clock="clr-namespace:Clock.clock" SizeToContent="WidthAndHeight" Topmost="True" WindowStyle="None" ShowInTaskbar="false" AllowsTransparency="True" 
             Background="Transparent" >
     <Window.Resources>
         <ResourceDictionary>
@@ -29,11 +29,11 @@
         </Thumb>
 
         <Viewbox Width="200" Margin="10">
-            <clock2:AnalogClock>
-                <clock2:AnalogClock.DataContext>
-                    <clock2:ClockViewModel/>
-                </clock2:AnalogClock.DataContext>
-            </clock2:AnalogClock>
+            <clock:AnalogClock>
+                <clock:AnalogClock.DataContext>
+                    <clock:ClockViewModel/>
+                </clock:AnalogClock.DataContext>
+            </clock:AnalogClock>
         </Viewbox>
     </Grid>
 </Window>

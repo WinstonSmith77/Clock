@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Matthias.Henning\\source\\Clock\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|c:\\users\\matthias.henning\\source\\clock\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|solutionrelative:relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|c:\\users\\matthias.henning\\source\\clock\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|c:\\users\\matthias.henning\\source\\clock\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|c:\\users\\matthias.henning\\source\\clock\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -19,14 +31,6 @@
       "RelativeMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|solutionrelative:clock\\clockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|c:\\users\\matthias.henning\\source\\clock\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|c:\\users\\matthias.henning\\source\\clock\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEC4DBAE-BD14-4901-B087-B8AE0263E722}|Clock.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Matthias.Henning\\source\\Clock\\.github\\upgrades\\dotnet-upgrade-plan.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\upgrades\\dotnet-upgrade-plan.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
@@ -38,11 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Matthias.Henning\\source\\Clock\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "RelayCommand.cs",
+              "ToolTip": "C:\\Users\\Matthias.Henning\\source\\Clock\\RelayCommand.cs",
+              "RelativeToolTip": "RelayCommand.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAIAwwCIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T10:31:03.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AnalogClock.xaml",
               "DocumentMoniker": "C:\\Users\\Matthias.Henning\\source\\Clock\\clock\\AnalogClock.xaml",
               "RelativeDocumentMoniker": "clock\\AnalogClock.xaml",
@@ -54,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AnalogClock.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Matthias.Henning\\source\\Clock\\clock\\AnalogClock.xaml.cs",
               "RelativeDocumentMoniker": "clock\\AnalogClock.xaml.cs",
@@ -67,12 +84,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ClockViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Matthias.Henning\\source\\Clock\\clock\\ClockViewModel.cs",
               "RelativeDocumentMoniker": "clock\\ClockViewModel.cs",
-              "ToolTip": "C:\\Users\\Matthias.Henning\\source\\Clock\\clock\\ClockViewModel.cs*",
-              "RelativeToolTip": "clock\\ClockViewModel.cs*",
+              "ToolTip": "C:\\Users\\Matthias.Henning\\source\\Clock\\clock\\ClockViewModel.cs",
+              "RelativeToolTip": "clock\\ClockViewModel.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAiwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T10:24:52.721Z",
@@ -80,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Matthias.Henning\\source\\Clock\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -93,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Matthias.Henning\\source\\Clock\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -105,20 +122,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Matthias.Henning\\source\\Clock\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Matthias.Henning\\source\\Clock\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwCoAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwCoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T10:22:04.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "dotnet-upgrade-plan.md",
               "DocumentMoniker": "C:\\Users\\Matthias.Henning\\source\\Clock\\.github\\upgrades\\dotnet-upgrade-plan.md",
               "RelativeDocumentMoniker": ".github\\upgrades\\dotnet-upgrade-plan.md",

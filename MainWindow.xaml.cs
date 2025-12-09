@@ -29,8 +29,6 @@ namespace Clock
         private double _startLeft;
         private double _startTop;
 
-
-
         private void Thumb_DragStarted(object sender, DragStartedEventArgs e)
         {
             _startLeft = Left;

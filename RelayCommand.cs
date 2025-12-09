@@ -4,31 +4,19 @@ using System.Windows.Input;
 
 namespace CommonStuff.WPF
 {
-    public class RelayCommand : ICommand
+    public class RelayCommand(Action execute, Func<bool> canExecute) : ICommand
     {
-        readonly Action _execute;
-        readonly Func<bool> _canExecute;
+        private readonly Action _execute = execute ?? throw new ArgumentNullException(nameof(execute));
 
         public RelayCommand(Action execute)
             : this(execute, () => true)
         {
         }
 
-        public RelayCommand(Action execute, Func<bool> canExecute)
-        {
-            if (execute == null)
-            {
-                throw new ArgumentNullException("execute");
-            }
-
-            _execute = execute;
-            _canExecute = canExecute;
-        }
-
         [DebuggerStepThrough]
         public bool CanExecute(object dummy)
         {
-            return _canExecute();
+            return canExecute();
         }
 
         public event EventHandler CanExecuteChangedInner;
@@ -45,11 +33,6 @@ namespace CommonStuff.WPF
                 CanExecuteChangedInner -= value;
                 CommandManager.RequerySuggested -= value;
             }
-        }
-
-        public void FireCanExecuteChanged()
-        {
-           
         }
 
         public void Execute(object parameter)
