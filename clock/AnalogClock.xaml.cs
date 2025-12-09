@@ -14,19 +14,15 @@ namespace Clock.clock
             InitializeComponent();
         }
 
-
-
-
         public SolidColorBrush Stroke
         {
-            get { return ((SolidColorBrush)GetValue(StrokeProperty)); }
-            set { SetValue(StrokeProperty, value); }
+            get => (SolidColorBrush)GetValue(StrokeProperty);
+            set => SetValue(StrokeProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Stroke.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty StrokeProperty =
-            DependencyProperty.Register("Stroke", typeof(SolidColorBrush), typeof(AnalogClock), new UIPropertyMetadata(Brushes.Black));
-
+            DependencyProperty.Register(nameof(Stroke), typeof(SolidColorBrush), typeof(AnalogClock), new UIPropertyMetadata(Brushes.Black));
         
     }
 }

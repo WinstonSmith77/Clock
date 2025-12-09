@@ -39,8 +39,8 @@ namespace Clock
 
         private void Thumb_DragDelta(object sender, DragDeltaEventArgs e)
         {
-            Left = _startLeft + (e.HorizontalChange);
-            Top = _startTop + (e.VerticalChange);
+            Left = _startLeft + e.HorizontalChange;
+            Top = _startTop + e.VerticalChange;
 
             _startLeft = Left;
             _startTop = Top;
@@ -60,7 +60,7 @@ namespace Clock
         {
             const int off = 2;
             var handle  = new WindowInteropHelper(this).Handle;
-            SendMessage(handle, WM_SYSCOMMAND, SC_MONITORPOWER, 2);
+            SendMessage(handle, WM_SYSCOMMAND, SC_MONITORPOWER, off);
         }
 
 

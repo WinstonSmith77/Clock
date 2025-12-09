@@ -21,9 +21,7 @@ namespace Clock.clock
 
         void timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-
-            Action doIt =
-            () =>
+            void DoIt()
             {
                 var now = DateTime.Now.AddHours(Offset);
 
@@ -32,70 +30,52 @@ namespace Clock.clock
                 Minutes = now.Minute + Seconds / 60;
 
                 Hours = now.Hour + Minutes / 60;
+            }
 
-
-            };
-
-
-            this.DispatchAction(doIt);
+            this.DispatchAction(DoIt);
         }
-
-
-
-
 
         public double Offset
         {
-            get { return (double)GetValue(OffsetProperty); }
-            set { SetValue(OffsetProperty, value); }
+            get => (double)GetValue(OffsetProperty);
+            set => SetValue(OffsetProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Offset.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty OffsetProperty =
-            DependencyProperty.Register("Offset", typeof(double), typeof(ClockViewModel), new UIPropertyMetadata(0d));
-
-
-
+            DependencyProperty.Register(nameof(Offset), typeof(double), typeof(ClockViewModel), new UIPropertyMetadata(0d));
 
 
         public double Minutes
         {
-            get { return (double)GetValue(MinutesProperty); }
-            set { SetValue(MinutesProperty, value); }
+            get => (double)GetValue(MinutesProperty);
+            set => SetValue(MinutesProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Minutes.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty MinutesProperty =
-            DependencyProperty.Register("Minutes", typeof(double), typeof(ClockViewModel), new UIPropertyMetadata(0d));
-
-
+            DependencyProperty.Register(nameof(Minutes), typeof(double), typeof(ClockViewModel), new UIPropertyMetadata(0d));
 
 
         public double Hours
         {
-            get { return (double)GetValue(HoursProperty); }
-            set { SetValue(HoursProperty, value); }
+            get => (double)GetValue(HoursProperty);
+            set => SetValue(HoursProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Hours.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty HoursProperty =
-            DependencyProperty.Register("Hours", typeof(double), typeof(ClockViewModel), new UIPropertyMetadata(0d));
-
+            DependencyProperty.Register(nameof(Hours), typeof(double), typeof(ClockViewModel), new UIPropertyMetadata(0d));
 
 
         public double Seconds
         {
-            get { return (double)GetValue(SecondsProperty); }
-            set { SetValue(SecondsProperty, value); }
+            get => (double)GetValue(SecondsProperty);
+            set => SetValue(SecondsProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Seconds.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty SecondsProperty =
-            DependencyProperty.Register("Seconds", typeof(double), typeof(ClockViewModel), new UIPropertyMetadata(0d));
-
-
-
-
-
+            DependencyProperty.Register(nameof(Seconds), typeof(double), typeof(ClockViewModel), new UIPropertyMetadata(0d));
     }
 }
