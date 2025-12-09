@@ -8,12 +8,10 @@ namespace Uhr.clock.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is double) || targetType != typeof(double))
+            if (value is not double valueAsDouble || targetType != typeof(double))
             {
                 return null;
             }
-
-            var valueAsDouble = (double)value;
 
             return valueAsDouble / 12.0 *  360;
         }

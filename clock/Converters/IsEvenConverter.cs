@@ -8,12 +8,10 @@ namespace Clock.clock.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is double) )
+            if (value is not double valueAsDouble )
             {
                 return null;
             }
-
-            var valueAsDouble = (double)value;
 
             return Math.Truncate(valueAsDouble)%2 == 0;
         }
